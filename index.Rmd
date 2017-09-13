@@ -1,0 +1,39 @@
+---
+output:
+  html_document:
+    toc_float: false
+---
+
+<!-- Title -->
+
+<div align="center">
+  <p>
+  <h1><b>
+    <img src="pictures/whale_logo.jpg" width="50" hspace = "20"/>
+    WHaLE Data Visualizer
+    <img src="pictures/whale_logo.jpg" width="50" hspace = "20"/>
+  </b></h1>
+  <h5><em>Interactive tools for displaying oceanographic data</em></h5>
+  </p>
+</div>
+
+***
+
+<!-- Live glider link -->
+
+<div align="center">
+  <a href="http://leviathan.ocean.dal.ca/live_glider/"><h3>Live Glider Data</h3></a>
+  <a href="http://leviathan.ocean.dal.ca/live_glider/"><img src="pictures/live_glider.png" width="600"/></a>
+</div>
+
+***
+
+<!-- right whale survey link -->
+
+<div align="center">
+  <a href="http://leviathan.ocean.dal.ca/right_whale_map/"><h3>Right Whale Survey Map</h3></a>
+  <a href="http://leviathan.ocean.dal.ca/right_whale_map/"><img src="pictures/right_whale_map.png" width="600"/></a>
+</div>
+
+***
+

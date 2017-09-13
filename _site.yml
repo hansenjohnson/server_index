@@ -1,0 +1,18 @@
+name: "leviathan-website"
+output_dir: "."
+exclude: ["README.md", "build_site.R"]
+navbar:
+  title: 'leviathan.ocean.dal.ca'
+      
+  right:
+    - text: "Live glider data"
+      icon: glyphicon-plane
+      href: http://leviathan.ocean.dal.ca/live_glider/
+    - text: "Right whale map"
+      icon: glyphicon-globe
+      href: http://leviathan.ocean.dal.ca/right_whale_map/
+      
+output:
+  html_document:
+    theme: yeti
+    highlight: default
