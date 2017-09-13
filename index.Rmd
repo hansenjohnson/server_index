@@ -22,8 +22,8 @@ output:
 <!-- Live glider link -->
 
 <div align="center">
-  <a href="http://leviathan.ocean.dal.ca/live_glider/"><h3>Live Glider Data</h3></a>
-  <a href="http://leviathan.ocean.dal.ca/live_glider/"><img src="pictures/live_glider.png" width="600"/></a>
+  <a href="live_glider/"><h3>Live Glider Data</h3></a>
+  <a href="live_glider/"><img src="pictures/live_glider.png" width="600"/></a>
 </div>
 
 ***
@@ -31,8 +31,8 @@ output:
 <!-- right whale survey link -->
 
 <div align="center">
-  <a href="http://leviathan.ocean.dal.ca/right_whale_map/"><h3>Right Whale Survey Map</h3></a>
-  <a href="http://leviathan.ocean.dal.ca/right_whale_map/"><img src="pictures/right_whale_map.png" width="600"/></a>
+  <a href="right_whale_map/"><h3>Right Whale Survey Map</h3></a>
+  <a href="right_whale_map/"><img src="pictures/right_whale_map.png" width="600"/></a>
 </div>
 
 ***

@@ -7,10 +7,10 @@ navbar:
   right:
     - text: "Live glider data"
       icon: glyphicon-plane
-      href: http://leviathan.ocean.dal.ca/live_glider/
+      href: live_glider/
     - text: "Right whale map"
       icon: glyphicon-globe
-      href: http://leviathan.ocean.dal.ca/right_whale_map/
+      href: right_whale_map/
       
 output:
   html_document:
