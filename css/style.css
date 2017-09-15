@@ -914,7 +914,7 @@
 		#header nav {
 			height: inherit;
 			line-height: inherit;
-			position: relative;
+			position: absolute;
 			right: 1.25em;
 			top: 0;
 			vertical-align: middle;
