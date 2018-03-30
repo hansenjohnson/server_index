@@ -1,4 +1,12 @@
+# Files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+.DS_Store
+whale_map.html
+
+
+# Directories
+dev/
+whale_map_files/
