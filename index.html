@@ -16,6 +16,7 @@
 		<script src="js/skel.min.js"></script>
 		<!-- <script src="js/skel-layers.min.js"></script> -->
 		<script src="js/init.js"></script>
+		<script src="js/clock.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -27,6 +28,34 @@
 	</head>
 	<body id="top">
 
+		<!-- Clock -->
+			<!-- borrowed from: http://www.ricocheting.com/code/javascript/html-generator/date-time-clock -->
+			<script type="text/javascript">
+				var tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+				function GetClock(){
+					var tzOffset = 0;//set this to the number of hours offset from UTC
+
+					var d=new Date();
+					var dx=d.toGMTString();
+					dx=dx.substr(0,dx.length -3);
+					d.setTime(Date.parse(dx))
+					d.setHours(d.getHours()+tzOffset);
+
+				var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+
+				var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+				if(nmin<=9) nmin="0"+nmin
+				if(nsec<=9) nsec="0"+nsec;
+
+				document.getElementById('clockbox').innerHTML="Current time (UTC): "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+				}
+
+				window.onload=function(){
+				GetClock();
+				setInterval(GetClock,1000);
+				}
+			</script>
 
 		<!-- Static Map -->
 			<section id="one" class="wrapper style2">
@@ -35,6 +64,7 @@
 					<p>Last 14 days of sightings, effort, and acoustic detections</p>
 				</header>
 				<div class="container" align="middle">
+					<div id="clockbox"></div>
 				  <iframe src="whale_map.html" width="90%" height="540"></iframe>
 				</div>
 				<div align="middle">
