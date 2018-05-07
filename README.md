@@ -1,7 +1,3 @@
 # server_index
-Main page of a shiny server hosting several apps dedicated to visualizing ocean data
 
-## To Do
-* Match image dimensions for apps  
-* Reduce image size of banner  
-* Add helpful links and contact information
+Public landing page for **WhaleMap** system for displaying whale survey results in near real-time. Currently live at: https://leviathan.ocean.dal.ca
