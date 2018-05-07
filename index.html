@@ -7,7 +7,6 @@
 <html>
 	<head>
 		<title>Leviathan</title>
-		<base href="server_index/">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="Right whale survey map" content="" />
 		<meta name="keywords" content="Right whale survey map" />
@@ -65,14 +64,15 @@
 					<h2>Latest Right Whale Survey Results</h2>
 					<p>Last 14 days of sightings, effort, and acoustic detections</p>
 				</header>
-
-				<ul class="actions" align="center">
-					<li><a href="../index.html#map" class="button big alt">Summary Map</a></li>
-					<li><a href="../index.html#key" class="button big alt">Map Key</a></li>
-					<li><a href="../index.html#about" class="button big alt">About</a></li>
-					<li><a href="../index.html#contact" class="button big alt">Contact</a></li>
-					<li><a href="https://leviathan.ocean.dal.ca/WhaleMap/" class="button big special">Interactive Map</a></li>
-				</ul>
+				<div align="middle">
+					<ul class="actions">
+						<li><a href="#map" class="button big alt">Summary Map</a></li>
+						<li><a href="#key" class="button big alt">Map Key</a></li>
+						<li><a href="#about" class="button big alt">About</a></li>
+						<li><a href="#contact" class="button big alt">Contact</a></li>
+						<li><a href="/WhaleMap/" class="button big special">Interactive Map</a></li>
+					</ul>
+				</div>
 
 				<!-- Map and clock -->
 				<div class="container" align="middle" id="map">
@@ -100,139 +100,139 @@
 									<tr>
 								    <td><img src="images/legend/sighting.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Definite sighting</h5>
-											These mark the approximate locations of definite sightings of right whales.
-											They are often associated with a dedicated survey platform, but can also be reported
-											opportunistically and validated with photographic or video evidence. Click on the
-											marker to learn more about the sighting.
+										<h5>Definite sighting</h5>
+										These mark the approximate locations of definite sightings of right whales.
+										They are often associated with a dedicated survey platform, but can also be reported
+										opportunistically and validated with photographic or video evidence. Click on the
+										marker to learn more about the sighting.
 										</td>
 								  </tr>
 
 									<!-- <tr>
 								    <td><img src="images/legend/possible_sighting.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Possible sighting</h5>
-											These mark the approximate locations of presumed right whale sightings that cannot
-											or have not been validated by an expert, and should be interpretted with caution. Click on the
-											marker to learn more about the sighting.
+										<h5>Possible sighting</h5>
+										These mark the approximate locations of presumed right whale sightings that cannot
+										or have not been validated by an expert, and should be interpretted with caution. Click on the
+										marker to learn more about the sighting.
 										</td>
 								  </tr> -->
 
 									<tr>
 								    <td><img src="images/legend/detection.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Definite acoustic detection</h5>
-											These mark the position of an autonomous acoustic platform (glider or buoy) when a manual
-											analyst determined right whale upcalls were definitely detected. More information on the platforms
-											and analysis protocol can be found <a href="http://dcs.whoi.edu/">here</a>. Click on the
-											marker to learn more about the detection.
+										<h5>Definite acoustic detection</h5>
+										These mark the position of an autonomous acoustic platform (glider or buoy) when a manual
+										analyst determined right whale upcalls were definitely detected. More information on the platforms
+										and analysis protocol can be found <a href="http://dcs.whoi.edu/">here</a>. Click on the
+										marker to learn more about the detection.
 										</td>
 								  </tr>
 
 									<tr>
 								    <td><img src="images/legend/possible_detection.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Possible acoustic detection</h5>
-											These mark the position of an autonomous acoustic platform (glider or buoy) when a manual
-											analyst determined right whale upcalls were possibly detected. More information on the platforms
-											and analysis protocol can be found <a href="http://dcs.whoi.edu/">here</a>. Click on the
-											marker to learn more about the detection.
+										<h5>Possible acoustic detection</h5>
+										These mark the position of an autonomous acoustic platform (glider or buoy) when a manual
+										analyst determined right whale upcalls were possibly detected. More information on the platforms
+										and analysis protocol can be found <a href="http://dcs.whoi.edu/">here</a>. Click on the
+										marker to learn more about the detection.
 										</td>
 								  </tr>
 
 									<tr>
 								    <td><img src="images/legend/glider.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Slocum glider survey track</h5>
-											These lines indicate the approximate survey path of a Slocum glider equipped
-											with a near <a href="http://dcs.whoi.edu/">real-time acoustic detection system</a>. These
-											autonomous underwater vehicles survey at slow speeds over weeks to months. Breaks in the lines
-											indicate times when the glider stopped listening for more than 2 hours. Click on any track to
-											see the deployment ID, which consists of the start date, platform, and name.
+										<h5>Slocum glider survey track</h5>
+										These lines indicate the approximate survey path of a Slocum glider equipped
+										with a near <a href="http://dcs.whoi.edu/">real-time acoustic detection system</a>. These
+										autonomous underwater vehicles survey at slow speeds over weeks to months. Breaks in the lines
+										indicate times when the glider stopped listening for more than 2 hours. Click on any track to
+										see the deployment ID, which consists of the start date, platform, and name.
 										</td>
 								  </tr>
 
 									<tr>
 										<td><img src="images/legend/vessel.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Vessel visual survey track</h5>
-											These lines show the paths of survey vessels while actively surveying for right whales. Breaks
-											in these lines indicate times when the survey teams on board stopped surveying. Click on any track to
-											see the deployment ID, which consists of the start date, platform, and name.
+										<h5>Vessel visual survey track</h5>
+										These lines show the paths of survey vessels while actively surveying for right whales. Breaks
+										in these lines indicate times when the survey teams on board stopped surveying. Click on any track to
+										see the deployment ID, which consists of the start date, platform, and name.
 									</td>
 									</tr>
 
 									<tr>
 										<td><img src="images/legend/plane.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Aerial visual survey track</h5>
-											These lines indicate the approximate track of survey planes looking for right whales. Most do
-											not reflect times when the teams were actively surveying, but simply show the entire flight path.
-											Click on any track to see the deployment ID, which consists of the start date, platform, and name.
+										<h5>Aerial visual survey track</h5>
+										These lines indicate the approximate track of survey planes looking for right whales. Most do
+										not reflect times when the teams were actively surveying, but simply show the entire flight path.
+										Click on any track to see the deployment ID, which consists of the start date, platform, and name.
 										</td>
 								  </tr>
 
 									<tr>
 										<td><img src="images/legend/lane.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Shipping lane</h5>
-											These polygons show traffic separation schemes used to direct the flow of ship traffic in congested
-											or dangerous areas. Most of the right-whale-relevant shipping lanes from Atlantic Canada are included,
-											but these are not comprehensive.
+										<h5>Shipping lane</h5>
+										These polygons show traffic separation schemes used to direct the flow of ship traffic in congested
+										or dangerous areas. Most of the right-whale-relevant shipping lanes from Atlantic Canada are included,
+										but these are not comprehensive.
 										</td>
 								  </tr>
 
 									<tr>
 										<td><img src="images/legend/mpa.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Protected area</h5>
-											These polygons represent a number of critical habitat or areas of importance for right whales and
-											other species in Atlantic Canada. Again, these are not comprehensive.
+										<h5>Protected area</h5>
+										These polygons represent a number of critical habitat or areas of importance for right whales and
+										other species in Atlantic Canada. Again, these are not comprehensive.
 										</td>
 								  </tr>
 
 									<tr>
 										<td><img src="images/legend/slocum.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Latest acoustic glider position</h5>
-											These icons show the latest position of a Slocum glider that is currently operating
-											and listening for right whales. Click on this icon to learn more details about the robot's
-											latest call home.
+										<h5>Latest acoustic glider position</h5>
+										These icons show the latest position of a Slocum glider that is currently operating
+										and listening for right whales. Click on this icon to learn more details about the robot's
+										latest call home.
 										</td>
 								  </tr>
 
 									<tr>
 										<td><img src="images/legend/buoy.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Latest acoustic buoy position</h5>
-											These icons show the latest position of a moored buoy that is currently operating
-											and listening for right whales. Click on this icon to learn more details about the robot's
-											latest call home.
+										<h5>Latest acoustic buoy position</h5>
+										These icons show the latest position of a moored buoy that is currently operating
+										and listening for right whales. Click on this icon to learn more details about the robot's
+										latest call home.
 										</td>
 								  </tr>
 
 									<tr>
 										<td><img src="images/legend/layer.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Layer selection tool</h5>
-											Click this button to show a list of map layers that can be turned off or on
+										<h5>Layer selection tool</h5>
+										Click this button to show a list of map layers that can be turned off or on
 										</td>
 								  </tr>
 
 									<tr>
 										<td><img src="images/legend/measure.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Measurement tool</h5>
-											Click this button to measure distances or areas. It is also helpful for determining the
-											latitude and longitude of a specific point of interest.
+										<h5>Measurement tool</h5>
+										Click this button to measure distances or areas. It is also helpful for determining the
+										latitude and longitude of a specific point of interest.
 										</td>
 								  </tr>
 
 									<tr>
 										<td><img src="images/legend/fullscreen.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
-											<h5>Toggle fullscreen</h5>
-											Use this button to make the map full screen [currently not available on mobile devices]
+										<h5>Toggle fullscreen</h5>
+										Use this button to make the map full screen [currently not available on mobile devices]
 										</td>
 								  </tr>
 
