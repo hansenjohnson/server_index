@@ -4,7 +4,7 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-<html>
+<html lang="en-US">
 	<head>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -43,7 +43,7 @@
 
 	</head>
 
-	<body id="top">
+	<body>
 
 		<!-- Clock -->
 			<!-- borrowed from: http://www.ricocheting.com/code/javascript/html-generator/date-time-clock -->
@@ -78,13 +78,25 @@
 			<section id="one" class="wrapper style2">
 
 				<!-- Disclaimer -->
-				<header class="major" style="background-color: #ff0000">
+				<!-- <header class="major" style="background-color: #ff0000">
 					<h2>Warning: WhaleMap under active development</h2>
-				</header>
+				</header> -->
+
+
+				<!-- Translate -->
+				<div align="right" id="google_translate_element">Choose language / Choisissez la langue:</div>
+
+				<script type="text/javascript">
+				function googleTranslateElementInit() {
+				  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+				}
+				</script>
+
+				<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 				<!-- Title -->
 				<header class="major">
-					<h2><strong>WhaleMap:</strong> Latest Right Whale Survey Results</h2>
+					<h2><strong>WhaleMap:</strong> Latest Right Whale Observations</h2>
 					<p>Last 14 days of sightings, effort, and acoustic detections</p>
 				</header>
 				<div align="middle">
@@ -92,8 +104,15 @@
 						<li><a href="#map" class="button big alt">Summary Map</a></li>
 						<li><a href="#key" class="button big alt">Map Key</a></li>
 						<li><a href="#about" class="button big alt">About</a></li>
-						<li><a href="#contact" class="button big alt">Contact</a></li>
+						<!-- <li><a href="#contact" class="button big alt">Contact</a></li> -->
 						<li><a href="/WhaleMap/" class="button big special">Interactive Map</a></li>
+					</ul>
+				</div>
+
+				<div align="middle">
+					<ul class="actions">
+						<li><a href="http://www.dfo-mpo.gc.ca/fm-gp/mammals-mammiferes/report-rapport-eng.html" style="background-color:#ff3333" class="button big alt">Report sighting</a></li>
+						<li><a href="https://www.marineanimals.ca/" style="background-color:#ff3333" class="button big alt">Report dead/distressed whale</a></li>
 					</ul>
 				</div>
 
@@ -101,14 +120,16 @@
 				<div class="container" align="middle" id="map">
 					<div id="clockbox"></div>
 				  <iframe src="whale_map.html" width="90%" height="540"></iframe>
-				</div>
+
 
 				<!-- Caveat -->
-				<div align="middle">
 				  <p>
 				    <i>
-							Data may only be used for the coordination of field research efforts. Any other use of data requires permission from the originating datasource. <br>
-							These are preliminary data and are subject to change. There may also be a delay between the publishing of tracks and observations.
+							This map should not be used for navigation or fisheries management purposes.
+							Data may only be used for the coordination of field research efforts.
+							Any other use of data requires permission from the originating datasource.
+							These are preliminary data and are subject to change.
+							There may also be a delay between the publishing of tracks and observations.
 						</i>
 				  </p>
 				</div>
@@ -152,7 +173,7 @@
 										</td>
 								  </tr>
 
-									<tr>
+									<!-- <tr>
 								    <td><img src="images/legend/possible_detection.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
 										<h5>Possible acoustic detection</h5>
@@ -161,7 +182,7 @@
 										and analysis protocol can be found <a href="http://dcs.whoi.edu/">here</a>. Click on the
 										marker to learn more about the detection.
 										</td>
-								  </tr>
+								  </tr> -->
 
 									<tr>
 								    <td><img src="images/legend/glider.png" alt="Test" width="100" height="100"></td>
@@ -170,8 +191,8 @@
 										These lines indicate the approximate survey path of a Slocum glider equipped
 										with a near <a href="http://dcs.whoi.edu/">real-time acoustic detection system</a>. These
 										autonomous underwater vehicles survey at slow speeds over weeks to months. Breaks in the lines
-										indicate times when the glider stopped listening for more than 2 hours. Click on any track to
-										see the deployment ID, which consists of the start date, platform, and name.
+										indicate times when the glider stopped listening for more than 2 hours.
+										[This layer is turned off by default]
 										</td>
 								  </tr>
 
@@ -180,8 +201,8 @@
 								    <td style="vertical-align:top">
 										<h5>Vessel visual survey track</h5>
 										These lines show the paths of survey vessels while actively surveying for right whales. Breaks
-										in these lines indicate times when the survey teams on board stopped surveying. Click on any track to
-										see the deployment ID, which consists of the start date, platform, and name.
+										in these lines indicate times when the survey teams on board stopped surveying.
+										[This layer is turned off by default]
 									</td>
 									</tr>
 
@@ -191,7 +212,7 @@
 										<h5>Aerial visual survey track</h5>
 										These lines indicate the approximate track of survey planes looking for right whales. Most do
 										not reflect times when the teams were actively surveying, but simply show the entire flight path.
-										Click on any track to see the deployment ID, which consists of the start date, platform, and name.
+										[This layer is turned off by default]
 										</td>
 								  </tr>
 
@@ -280,28 +301,47 @@
 								relies on finding these whales - an extraordinarily difficult task
 								given limited resources and a vast ocean.
 
+								<br>
+								<br>
+
 								This map was designed to communicate the latest right whale
-								survey results to research, regulatory and industrial sectors to
+								observations and survey results to scientific, regulatory and industrial sectors to
 								inform more effective, dynamic planning of research and conservation activities.
 								It's synchronized with data repositories from a number of different
 								survey groups in Atlantic Canada, so that shortly after their planes land,
 								boats tie up, or autonomous vehicles call home, the survey results will update here.
+
+								<br>
+								<br>
+
+								It would not be possible without the tireless efforts of the data contributors.
+								Their dedication and collaborative spirit give this species the best chance at survival.
 							</p>
 
 							<h2 id="contact">Contact</h2>
 							<p>Please email Hansen Johnson at hansen(dot)johnson(at)dal.ca with any questions, suggestions, or otherwise.</p>
 						</div>
 						<div class="6u">
+
+							<h2 id="about">Data contributors</h2>
+
+							<ul class="alt">
+								<li><a href="http://www.dfo-mpo.gc.ca/species-especes/profiles-profils/rightwhaleNA-baleinenoireAN-eng.html">DFO Quebec, Gulf, Newfoundland, and Maritimes regions</a></li>
+								<li><a href="https://www.tc.gc.ca/en/services/marine/navigation-marine-conditions/protecting-north-atlantic-right-whales-ship-strikes-gulf-st-lawrence.html">Transport Canada</a></li>
+								<li><a href="https://www.nefsc.noaa.gov/psb/whales/">NOAA Protected Species Branch</a></li>
+								<li><a href="http://dcs.whoi.edu/">Woods Hole Oceanographic Institution / robots4whales</a></li>
+								<li><a href="http://www.andersoncabotcenterforoceanlife.org/our-work/research/right-whales/">New England Aquarium</a></li>
+								<li><a href="https://www.canadianwhaleinstitute.ca/">Canadian Whale Institute</a></li>
+								<li><a href="https://www.rorqual.com/english/home">Mignan Island Cetacean Study</a></li>
+								<li><a href="http://gliders.oceantrack.org/">Ocean Tracking Network</a></li>
+								<li><a href="http://meopar.ca/research/project/whale-whales-habitat-and-listening-experiment">Dalhousie University / MEOPAR-WHaLE Project</a></li>
+							</ul>
+
 							<h2>More Information</h2>
 							<!-- <div class="row collapse-at-2"> -->
 								<!-- <div class="6u"> -->
 									<ul class="alt">
-										<li><a href="http://www.dfo-mpo.gc.ca/species-especes/profiles-profils/rightwhaleNA-baleinenoireAN-eng.html">DFO Right Whale Overview</a></li>
-										<li><a href="https://www.nefsc.noaa.gov/psb/whales/">NOAA Protected Species Branch</a></li>
-										<li><a href="http://dcs.whoi.edu/">robots4whales</a></li>
-										<li><a href="http://meopar.ca/research/project/whale-whales-habitat-and-listening-experiment">MEOPAR-WHaLE Project</a></li>
-										<li><a href="http://gliders.oceantrack.org/">Ocean Tracking Network</a></li>
-										<li><a href="https://www.nefsc.noaa.gov/psb/surveys/">Right Whale Sightings Map</a></li>
+										<li><a href="https://www.nefsc.noaa.gov/psb/surveys/">NOAA Right Whale Sightings Map</a></li>
 										<li><a href="https://www.narwc.org/">North Atlantic Right Whale Consortium</a></li>
 										<li><a href="https://ropeless.org/">Ropeless Consortium</a></li>
 										<li><a href="http://rwcatalog.neaq.org/Terms.aspx">North Atlantic Right Whale Catalogue</a></li>
