@@ -6,8 +6,12 @@
 .DS_Store
 *.Rproj
 whale_map.html
+whale_map-en.html
+whale_map-fr.html
 
 
 # Directories
 dev/
 whale_map_files/
+whale_map-en_files/
+whale_map-fr_files/
