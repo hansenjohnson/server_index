@@ -7,10 +7,11 @@
 *.Rproj
 whale_map_en.html
 whale_map_fr.html
+whalemap.html
 
 
 # Directories
 dev/
-whale_map_files/
+whalemap_files/
 whale_map_en_files/
 whale_map_fr_files/
