@@ -5,80 +5,88 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html lang="en-US">
-	<head>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+<head>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118575263-3"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
-		  gtag('config', 'UA-118575263-3');
-		</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118575263-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-		<!-- Metadata  -->
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-		<title>WhaleMap</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="WhaleMap" content="" />
-		<meta name="keywords" content="WhaleMap,whalemap,right whale,narw,right whales,aerial,surveys,DFO,Canada,oceanography,Dalhousie" />
+        gtag('config', 'UA-118575263-3');
+    </script>
 
-		<!-- javascript  -->
+    <!-- Metadata  -->
 
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<!-- <script src="js/skel-layers.min.js"></script> -->
-		<script src="js/init.js"></script>
-		<script src="js/clock.js"></script>
-		<noscript>
+    <title>WhaleMap</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="WhaleMap" content="" />
+    <meta name="keywords" content="WhaleMap,whalemap,right whale,narw,right whales,aerial,surveys,DFO,Canada,oceanography,Dalhousie" />
+
+    <!-- javascript  -->
+
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <!-- <script src="js/skel-layers.min.js"></script> -->
+    <script src="js/init.js"></script>
+    <script src="js/clock.js"></script>
+    <noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<!-- Clock -->
-			<!-- borrowed from: http://www.ricocheting.com/code/javascript/html-generator/date-time-clock -->
-			<script type="text/javascript">
-				var tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+    <!-- Clock -->
+    <!-- borrowed from: http://www.ricocheting.com/code/javascript/html-generator/date-time-clock -->
+    <script type="text/javascript">
+        var tmonth = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 
-				function GetClock(){
-					var tzOffset = 0;//set this to the number of hours offset from UTC
+        function GetClock() {
+            var tzOffset = 0; //set this to the number of hours offset from UTC
 
-					var d=new Date();
-					var dx=d.toGMTString();
-					dx=dx.substr(0,dx.length -3);
-					d.setTime(Date.parse(dx))
-					d.setHours(d.getHours()+tzOffset);
+            var d = new Date();
+            var dx = d.toGMTString();
+            dx = dx.substr(0, dx.length - 3);
+            d.setTime(Date.parse(dx))
+            d.setHours(d.getHours() + tzOffset);
 
-				var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+            var nmonth = d.getMonth(),
+                ndate = d.getDate(),
+                nyear = d.getFullYear();
 
-				var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
-				if(nmin<=9) nmin="0"+nmin
-				if(nsec<=9) nsec="0"+nsec;
+            var nhour = d.getHours(),
+                nmin = d.getMinutes(),
+                nsec = d.getSeconds();
+            if (nmin <= 9) nmin = "0" + nmin
+            if (nsec <= 9) nsec = "0" + nsec;
 
-				document.getElementById('clockbox').innerHTML="Current time (UTC): "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
-				}
+            document.getElementById('clockbox').innerHTML = "Current time (UTC): " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + "";
+        }
 
-				window.onload=function(){
-				GetClock();
-				setInterval(GetClock,1000);
-				}
-			</script>
+        window.onload = function() {
+            GetClock();
+            setInterval(GetClock, 1000);
+        }
+    </script>
 
-		<!-- Map section -->
-			<section id="one" class="wrapper style2">
+    <!-- Map section -->
+    <section id="one" class="wrapper style2">
 
-				<!-- Disclaimer -->
-				<!-- <header class="major" style="background-color: #ff0000">
+        <!-- Disclaimer -->
+        <!-- <header class="major" style="background-color: #ff0000">
 					<h4>
 						WhaleMap currently focuses on Canadian waters.
 						For the latest observations in US waters, go to:
@@ -86,64 +94,62 @@
 					</h4>
 				</header> -->
 
-				<!-- Title -->
-				<header class="major">
-					<h2><strong>WhaleMap:</strong> Latest Right Whale Observations</h2>
-					<p>Last 14 days of sightings, effort, and acoustic detections</p>
-				</header>
-				<div align="middle">
-					<ul class="actions">
-						<li><a href="#map" class="button big alt">Summary Map</a></li>
-						<li><a href="#key" class="button big alt">Map Key</a></li>
-						<li><a href="#about" class="button big alt">About</a></li>
-						<!-- <li><a href="#contact" class="button big alt">Contact</a></li> -->
-						<!-- <li><a href="/WhaleMap/" class="button big special">Interactive Map</a></li> -->
-						<li><a href="../WhaleMap/" class="button big special">Interactive Map</a></li>
-					</ul>
-				</div>
+        <!-- Title -->
+        <header class="major">
+            <h2><strong>WhaleMap:</strong> Latest Right Whale Observations</h2>
+            <p>Last 14 days of sightings, effort, and acoustic detections</p>
+        </header>
+        <div align="middle">
+            <ul class="actions">
+                <li><a href="#map" class="button big alt">Summary Map</a></li>
+                <li><a href="#key" class="button big alt">Map Key</a></li>
+                <li><a href="#about" class="button big alt">About</a></li>
+                <!-- <li><a href="#contact" class="button big alt">Contact</a></li> -->
+                <!-- <li><a href="/WhaleMap/" class="button big special">Interactive Map</a></li> -->
+                <li><a href="../WhaleMap/" class="button big special">Interactive Map</a></li>
+            </ul>
+        </div>
 
-				<div align="middle">
-					<ul class="actions">
-						<li><a href="http://www.dfo-mpo.gc.ca/fisheries-peches/commercial-commerciale/atl-arc/narw-bnan/management-gestion-eng.html" style="background-color:#ff3333" class="button big alt">Fisheries notices</a></li>
-						<li><a href="http://www.dfo-mpo.gc.ca/species-especes/mammals-mammiferes/report-rapport/page01-eng.html" style="background-color:#ff3333" class="button big alt">Report sighting</a></li>
-						<li><a href="https://www.marineanimals.ca/" style="background-color:#ff3333" class="button big alt">Report dead/distressed whale</a></li>
-					</ul>
-				</div>
+        <div align="middle">
+            <ul class="actions">
+                <li><a href="http://www.dfo-mpo.gc.ca/fisheries-peches/commercial-commerciale/atl-arc/narw-bnan/management-gestion-eng.html" style="background-color:#ff3333" class="button big alt">Fisheries notices</a></li>
+                <li><a href="http://www.dfo-mpo.gc.ca/species-especes/mammals-mammiferes/report-rapport/page01-eng.html" style="background-color:#ff3333" class="button big alt">Report sighting</a></li>
+                <li><a href="https://www.marineanimals.ca/" style="background-color:#ff3333" class="button big alt">Report dead/distressed whale</a></li>
+            </ul>
+        </div>
 
-				<!-- Map and clock -->
-				<div class="container" align="middle" id="map">
-					<div id="clockbox"></div>
-				  <iframe src="whalemap.html" style="border-radius: 10px; overflow: hidden;" width="90%" height="540"></iframe>
+        <!-- Map and clock -->
+        <div class="container" align="middle" id="map">
+            <div id="clockbox"></div>
+            <iframe src="whalemap.html" style="border-radius: 10px; overflow: hidden;" width="90%" height="540"></iframe>
 
-				<!-- Caveat -->
-				  <p>
-				    <i>							
+            <!-- Caveat -->
+            <p>
+                <i>							
 							These data are preliminary data, subject to change, and not to be used without permission from the contributor(s).
 							WhaleMap currently focuses on Canadian waters. For the latest observations in the USA, check the
 							<a href="https://fish.nefsc.noaa.gov/psb/surveys/MapperiframeWithText.html">NOAA right whale sighting advisory system</a>
 						</i>
-				  </p>
-				</div>
+            </p>
+        </div>
 
-				<!-- Map key -->
-				<div align="middle">
-				<h2 id="key"> Map Key </h2>
+        <!-- Map key -->
+        <div align="middle">
+            <h2 id="key"> Map Key </h2>
 
-							<div style="overflow-x:auto;">
-								<table style="width: 75%">
+            <div style="overflow-x:auto;">
+                <table style="width: 75%">
 
-									<tr>
-								    <td><img src="images/legend/sighting.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Definite sighting</h5>
-										These mark the approximate locations of definite sightings of right whales.
-										They are often associated with a dedicated survey platform, but can also be reported
-										opportunistically and validated with photographic or video evidence. Click on the
-										marker to learn more about the sighting.
-										</td>
-								  </tr>
+                    <tr>
+                        <td><img src="images/legend/sighting.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Definite sighting</h5>
+                            These mark the approximate locations of definite sightings of right whales. They are often associated with a dedicated survey platform, but can also be reported opportunistically and validated with photographic or video evidence. Click on the marker to
+                            learn more about the sighting.
+                        </td>
+                    </tr>
 
-									<!-- <tr>
+                    <!-- <tr>
 								    <td><img src="images/legend/possible_sighting.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
 										<h5>Possible sighting</h5>
@@ -153,17 +159,16 @@
 										</td>
 								  </tr> -->
 
-									<tr>
-								    <td><img src="images/legend/detection.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Definite acoustic detection</h5>
-										These mark the position of an acoustic platform (glider or buoy) when it detected a right whale call.
-										More information on the platforms and analysis protocol can be found <a href="http://dcs.whoi.edu/">here</a>.
-										Click on the marker to learn more about the detection.
-										</td>
-								  </tr>
+                    <tr>
+                        <td><img src="images/legend/detection.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Definite acoustic detection</h5>
+                            These mark the position of an acoustic platform (glider or buoy) when it detected a right whale call. More information on the platforms and analysis protocol can be found <a href="http://dcs.whoi.edu/">here</a>. Click on the
+                            marker to learn more about the detection.
+                        </td>
+                    </tr>
 
-									<!-- <tr>
+                    <!-- <tr>
 								    <td><img src="images/legend/possible_detection.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
 										<h5>Possible acoustic detection</h5>
@@ -174,83 +179,72 @@
 										</td>
 								  </tr> -->
 
-									<tr>
-								    <td><img src="images/legend/glider.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Acoustic glider survey track</h5>
-										These lines indicate the approximate survey path of an underwater glider equipped
-										with a <a href="http://dcs.whoi.edu/">system to detect right whale sounds</a>. These
-										autonomous vehicles survey at slow speeds over weeks to months. Breaks in the lines
-										indicate times when the glider stopped listening for more than 2 hours.
-										[This layer 'Survey tracks' is turned off by default]
-										</td>
-								  </tr>
+                    <tr>
+                        <td><img src="images/legend/glider.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Acoustic glider survey track</h5>
+                            These lines indicate the approximate survey path of an underwater glider equipped with a <a href="http://dcs.whoi.edu/">system to detect right whale sounds</a>. These autonomous vehicles survey at slow speeds over weeks to
+                            months. Breaks in the lines indicate times when the glider stopped listening for more than 2 hours. [This layer 'Survey tracks' is turned off by default]
+                        </td>
+                    </tr>
 
-									<tr>
-										<td><img src="images/legend/vessel.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Vessel visual survey track</h5>
-										These lines show the paths of survey vessels while actively surveying for right whales. Breaks
-										in these lines indicate times when the survey teams on board stopped surveying.
-										[This layer 'Survey tracks' is turned off by default]
-									</td>
-									</tr>
+                    <tr>
+                        <td><img src="images/legend/vessel.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Vessel visual survey track</h5>
+                            These lines show the paths of survey vessels while actively surveying for right whales. Breaks in these lines indicate times when the survey teams on board stopped surveying. [This layer 'Survey tracks' is turned off by default]
+                        </td>
+                    </tr>
 
-									<tr>
-										<td><img src="images/legend/plane.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Aerial visual survey track</h5>
-										These lines indicate the approximate track of survey planes looking for right whales. Most do
-										not reflect times when the teams were actively surveying, but simply show the entire flight path.
-										[This layer 'Survey tracks' is turned off by default]
-										</td>
-								  </tr>
+                    <tr>
+                        <td><img src="images/legend/plane.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Aerial visual survey track</h5>
+                            These lines indicate the approximate track of survey planes looking for right whales. Most do not reflect times when the teams were actively surveying, but simply show the entire flight path. [This layer 'Survey tracks' is turned off by default]
+                        </td>
+                    </tr>
 
-									<tr>
-										<td><img src="images/legend/lane.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Shipping lane</h5>
-										These polygons show traffic separation schemes used to direct the flow of ship traffic in congested
-										or dangerous areas. Most of the right-whale-relevant shipping lanes from Atlantic Canada are included,
-										but these are not comprehensive.
-										</td>
-								  </tr>
+                    <tr>
+                        <td><img src="images/legend/lane.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Shipping lane</h5>
+                            These polygons show traffic separation schemes used to direct the flow of ship traffic in congested or dangerous areas. Most of the right-whale-relevant shipping lanes from Atlantic Canada are included, but these are not comprehensive.
+                        </td>
+                    </tr>
 
-									<tr>
-										<td><img src="images/legend/mpa.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Protected area</h5>
-										These polygons represent a number of critical habitat or areas of importance for right whales and
-										other species in Atlantic Canada.
-										</td>
-								  </tr>
+                    <tr>
+                        <td><img src="images/legend/mpa.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Protected area</h5>
+                            These polygons represent a number of critical habitat or areas of importance for right whales and other species in Atlantic Canada.
+                        </td>
+                    </tr>
 
-									<tr>
-										<td><img src="images/legend/slocum.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Latest acoustic glider position</h5>
-										These icons show the latest position of an acoustic glider that is currently operating and listening for right whales. [This layer 'Latest robot positions' is turned off by default]
-										</td>
-								  </tr>
+                    <tr>
+                        <td><img src="images/legend/slocum.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Latest acoustic glider position</h5>
+                            These icons show the latest position of an acoustic glider that is currently operating and listening for right whales. [This layer 'Latest robot positions' is turned off by default]
+                        </td>
+                    </tr>
 
-									<tr>
-										<td><img src="images/legend/buoy.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Latest acoustic buoy position</h5>
-										These icons show the latest position of a moored buoy that is currently operating
-										and listening for right whales.
-										</td>
-								  </tr>
+                    <tr>
+                        <td><img src="images/legend/buoy.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Latest acoustic buoy position</h5>
+                            These icons show the latest position of a moored buoy that is currently operating and listening for right whales.
+                        </td>
+                    </tr>
 
-									<tr>
-										<td><img src="images/legend/layer.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Layer selection tool</h5>
-										Click this button to show a list of map layers that can be turned off or on
-										</td>
-								  </tr>
+                    <tr>
+                        <td><img src="images/legend/layer.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Layer selection tool</h5>
+                            Click this button to show a list of map layers that can be turned off or on
+                        </td>
+                    </tr>
 
-									<!-- <tr>
+                    <!-- <tr>
 										<td><img src="images/legend/measure.png" alt="Test" width="100" height="100"></td>
 								    <td style="vertical-align:top">
 										<h5>Measurement tool</h5>
@@ -259,104 +253,93 @@
 										</td>
 								  </tr> -->
 
-									<tr>
-										<td><img src="images/legend/fullscreen.png" alt="Test" width="100" height="100"></td>
-								    <td style="vertical-align:top">
-										<h5>Toggle fullscreen</h5>
-										Use this button to make the map full screen [currently not available on mobile devices]
-										</td>
-								  </tr>
+                    <tr>
+                        <td><img src="images/legend/fullscreen.png" alt="Test" width="100" height="100"></td>
+                        <td style="vertical-align:top">
+                            <h5>Toggle fullscreen</h5>
+                            Use this button to make the map full screen [currently not available on mobile devices]
+                        </td>
+                    </tr>
 
-								</table>
-							</div>
-				</div>
+                </table>
+            </div>
+        </div>
 
-			</section>
+    </section>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<div class="row double">
-						<div class="6u">
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row double">
+                <div class="6u">
 
-							<h2 id="about">About</h2>
+                    <h2 id="about">About</h2>
 
-							<p>
-								North Atlantic right whales are in peril. Ship strikes and
-								entanglement in fishing gear have spurred a population decline
-								that may lead to extinction in ~20 years. Successful conservation
-								relies on finding these whales - an extraordinarily difficult task
-								given limited resources and a vast ocean.
+                    <p>
+                        North Atlantic right whales are in peril. Ship strikes and entanglement in fishing gear have spurred a population decline that may lead to extinction in ~20 years. Successful conservation relies on finding these whales - an extraordinarily difficult task
+                        given limited resources and a vast ocean.
 
-								<br>
-								<br>
+                        <br>
+                        <br> This map was designed to communicate the latest right whale observations and survey results to scientific, regulatory and industrial sectors to inform more effective, dynamic planning of research and conservation activities.
+                        It's synchronized with data repositories from a number of different survey groups in Atlantic Canada, so that shortly after their planes land, boats tie up, or autonomous vehicles call home, the survey results will update here.
 
-								This map was designed to communicate the latest right whale
-								observations and survey results to scientific, regulatory and industrial sectors to
-								inform more effective, dynamic planning of research and conservation activities.
-								It's synchronized with data repositories from a number of different
-								survey groups in Atlantic Canada, so that shortly after their planes land,
-								boats tie up, or autonomous vehicles call home, the survey results will update here.
+                        <br>
+                        <br> It would not be possible without the tireless efforts of the data contributors. Their dedication and collaborative spirit give this species the best chance at survival.
+                    </p>
 
-								<br>
-								<br>
+                    <h2 id="cite">Citing WhaleMap</h2>
 
-								It would not be possible without the tireless efforts of the data contributors.
-								Their dedication and collaborative spirit give this species the best chance at survival.
-							</p>
+                    <p>
+                        Please reference WhaleMap as follows:
+                    </p>
 
-							<h2 id="cite">Citing WhaleMap</h2>
+                    <blockquote>
+                        Johnson, HD (2018). WhaleMap. Available at: https://whalemap.ocean.dal.ca/. (Accessed: YYYY-MM-DD)
+                    </blockquote>
 
-							<p>
-								Please reference WhaleMap as follows:
-							</p>
+                    <h2 id="contact">Contact</h2>
+                    <p>Please email Hansen Johnson at hansen(dot)johnson(at)dal.ca with any questions, suggestions, or otherwise.</p>
+                </div>
+                <div class="6u">
 
-							<blockquote>
-								Johnson, HD (2018). WhaleMap. Available at: https://whalemap.ocean.dal.ca/. (Accessed: YYYY-MM-DD)
-							</blockquote>
+                    <h2 id="about">Data contributors</h2>
 
-							<h2 id="contact">Contact</h2>
-							<p>Please email Hansen Johnson at hansen(dot)johnson(at)dal.ca with any questions, suggestions, or otherwise.</p>
-						</div>
-						<div class="6u">
+                    <ul class="alt">
+                        <li><a href="http://www.dfo-mpo.gc.ca/species-especes/mammals-mammiferes/narightwhale-baleinenoirean/alert-alerte/index-eng.html">DFO Quebec, Gulf, Newfoundland, and Maritimes regions</a></li>
+                        <li><a href="https://tc.canada.ca/en/marine-transportation/navigation-marine-conditions/protecting-north-atlantic-right-whales-collisions-vessels-gulf-st-lawrence">Transport Canada</a></li>
+                        <li><a href="https://www.nefsc.noaa.gov/psb/whales/">NOAA Protected Species Branch</a></li>
+                        <li><a href="http://dcs.whoi.edu/">Woods Hole Oceanographic Institution / robots4whales</a></li>
+                        <li><a href="http://www.andersoncabotcenterforoceanlife.org/our-work/research/right-whales/">New England Aquarium</a></li>
+                        <li><a href="https://www.canadianwhaleinstitute.ca/">Canadian Whale Institute</a></li>
+                        <li><a href="https://www.rorqual.com/english/home">Mingan Island Cetacean Study</a></li>
+                        <li><a href="http://gliders.oceantrack.org/">Ocean Tracking Network</a></li>
+                        <li><a href="https://fishocean.ocean.dal.ca/">Dalhousie University Fisheries Oceanography Laboratory</a></li>
+                    </ul>
 
-							<h2 id="about">Data contributors</h2>
+                    <h2>More Information</h2>
+                    <!-- <div class="row collapse-at-2"> -->
+                    <!-- <div class="6u"> -->
+                    <ul class="alt">
+                        <li><a href="https://www.tc.gc.ca/en/services/marine/navigation-marine-conditions/protecting-north-atlantic-right-whales-collisions-ships-gulf-st-lawrence.html">TC vessel management measures</a></li>
+                        <li><a href="http://www.dfo-mpo.gc.ca/fisheries-peches/commercial-commerciale/atl-arc/narw-bnan/management-gestion-eng.html">DFO fisheries management measures</a></li>
+                        <li><a href="https://www.fisheries.noaa.gov/species/north-atlantic-right-whale#conservation-management">NOAA management measures</a></li>
+                        <li><a href="https://www.nefsc.noaa.gov/psb/surveys/">NOAA Right Whale Sightings Map</a></li>
+                        <li><a href="https://www.narwc.org/">North Atlantic Right Whale Consortium</a></li>
+                        <li><a href="https://ropeless.org/">Ropeless Consortium</a></li>
+                        <li><a href="http://rwcatalog.neaq.org/Terms.aspx">North Atlantic Right Whale Catalogue</a></li>
+                        <li><a href="http://apps.cwf-fcf.org/whales/">Canadian Wildlife Federation</a></li>
+                        <li><a href="https://www.marineanimals.ca/">Marine Animal Response Society</a></li>
+                        <li><a href="http://www.whalealert.org/">Whale Alert App</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="copyright">
+                <li>2020 &copy; <a href="http://meopar.ca/research/project/whale-whales-habitat-and-listening-experiment">MEOPAR-WHaLE</a></li>
+                <li>Design based on ION by <a href="http://templated.co">Templated</a></li>
+            </ul>
+        </div>
+    </footer>
 
-							<ul class="alt">
-								<li><a href="http://www.dfo-mpo.gc.ca/species-especes/mammals-mammiferes/narightwhale-baleinenoirean/alert-alerte/index-eng.html">DFO Quebec, Gulf, Newfoundland, and Maritimes regions</a></li>
-								<li><a href="https://www.tc.gc.ca/en/services/marine/navigation-marine-conditions/protecting-north-atlantic-right-whales-ship-strikes-gulf-st-lawrence.html">Transport Canada</a></li>
-								<li><a href="https://www.nefsc.noaa.gov/psb/whales/">NOAA Protected Species Branch</a></li>
-								<li><a href="http://dcs.whoi.edu/">Woods Hole Oceanographic Institution / robots4whales</a></li>
-								<li><a href="http://www.andersoncabotcenterforoceanlife.org/our-work/research/right-whales/">New England Aquarium</a></li>
-								<li><a href="https://www.canadianwhaleinstitute.ca/">Canadian Whale Institute</a></li>
-								<li><a href="https://www.rorqual.com/english/home">Mingan Island Cetacean Study</a></li>
-								<li><a href="http://gliders.oceantrack.org/">Ocean Tracking Network</a></li>
-								<li><a href="https://fishocean.ocean.dal.ca/">Dalhousie University Fisheries Oceanography Laboratory</a></li>
-							</ul>
+</body>
 
-							<h2>More Information</h2>
-							<!-- <div class="row collapse-at-2"> -->
-								<!-- <div class="6u"> -->
-									<ul class="alt">
-										<li><a href="https://www.tc.gc.ca/en/services/marine/navigation-marine-conditions/protecting-north-atlantic-right-whales-collisions-ships-gulf-st-lawrence.html">TC vessel management measures</a></li>
-										<li><a href="http://www.dfo-mpo.gc.ca/species-especes/mammals-mammiferes/narightwhale-baleinenoirean/fm-gp/index-eng.html">DFO fisheries management measures</a></li>
-										<li><a href="https://www.fisheries.noaa.gov/species/north-atlantic-right-whale#management">NOAA management measures</a></li>
-										<li><a href="https://www.nefsc.noaa.gov/psb/surveys/">NOAA Right Whale Sightings Map</a></li>
-										<li><a href="https://www.narwc.org/">North Atlantic Right Whale Consortium</a></li>
-										<li><a href="https://ropeless.org/">Ropeless Consortium</a></li>
-										<li><a href="http://rwcatalog.neaq.org/Terms.aspx">North Atlantic Right Whale Catalogue</a></li>
-										<li><a href="http://apps.cwf-fcf.org/whales/">Canadian Wildlife Federation</a></li>
-										<li><a href="https://www.marineanimals.ca/">Marine Animal Response Society</a></li>
-										<li><a href="http://www.whalealert.org/">Whale Alert App</a></li>
-									</ul>
-						</div>
-					</div>
-					<ul class="copyright">
-						<li>2020 &copy; <a href="http://meopar.ca/research/project/whale-whales-habitat-and-listening-experiment">MEOPAR-WHaLE</a></li>
-						<li>Design based on ION by <a href="http://templated.co">Templated</a></li>
-					</ul>
-				</div>
-			</footer>
-
-	</body>
 </html>
