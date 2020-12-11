@@ -101,11 +101,44 @@
 
         <div align="middle">
             <ul class="actions">
-                <li><a href="http://www.dfo-mpo.gc.ca/fisheries-peches/commercial-commerciale/atl-arc/narw-bnan/management-gestion-eng.html" style="background-color:#ff3333" class="button big alt">Fisheries notices</a></li>
-                <li><a href="http://www.dfo-mpo.gc.ca/species-especes/mammals-mammiferes/report-rapport/page01-eng.html" style="background-color:#ff3333" class="button big alt">Report sighting</a></li>
-                <li><a href="https://www.marineanimals.ca/" style="background-color:#ff3333" class="button big alt">Report dead/distressed whale</a></li>
+
+                <!-- management dropdown -->
+                <li>
+                    <div class="dropdown">
+                        <button class="button big alt" style="background-color:#ff3333">Management measures</button>
+                        <div class="dropdown-content">
+                            <a href="https://www.dfo-mpo.gc.ca/fisheries-peches/commercial-commerciale/atl-arc/narw-bnan/management-gestion-eng.html">Fisheries in Canada</a>
+                            <a href="https://tc.canada.ca/en/marine-transportation/navigation-marine-conditions/protecting-north-atlantic-right-whales-collisions-vessels-gulf-st-lawrence">Vessels in Canada</a>
+                            <a href="https://www.fisheries.noaa.gov/species/north-atlantic-right-whale#conservation-management">Fisheries/Vessels in USA</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- report sighting dropdown -->
+                <li>
+                    <div class="dropdown">
+                        <button class="button big alt" style="background-color:#ff3333">Report sighting</button>
+                        <div class="dropdown-content">
+                            <a href="https://www.dfo-mpo.gc.ca/species-especes/mammals-mammiferes/report-rapport/page01-eng.html">Report in Canada</a>
+                            <a href="https://apps-nefsc.fisheries.noaa.gov/psb/surveys/documents/20120919_Report_a_Right_Whale.pdf">Report in USA</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- report dead/distressed dropdown -->
+                <li>
+                    <div class="dropdown">
+                        <button class="button big alt" style="background-color:#ff3333">Report dead/distressed whale</button>
+                        <div class="dropdown-content">
+                            <a href="https://www.marineanimals.ca/">Report in Canada</a>
+                            <a href="https://www.fisheries.noaa.gov/new-england-mid-atlantic/marine-life-distress/greater-atlantic-marine-mammal-stranding-network">Report in USA</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
+
+
 
         <!-- Map and clock -->
         <div class="container" align="middle" id="map">
