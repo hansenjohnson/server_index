@@ -89,7 +89,7 @@ Click on the `Layers` tab at the top left of the application to customize the ap
 
 ## Choose from different basemaps {.tabset}
 
-Use the `Choose basemap:` dropdown menu to select the background you would like. Remember to click `Go` in the bottom left to plot the new map. 
+Use the `Choose basemap:` dropdown menu to select the background you would like. Remember to click `Go` in the bottom left to plot the new data. 
 
 ### ESRI Ocean
 
