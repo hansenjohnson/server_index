@@ -8,7 +8,7 @@
 whale_map_en.html
 whale_map_fr.html
 whalemap.html
-
+*.xml
 
 # Directories
 dev/
